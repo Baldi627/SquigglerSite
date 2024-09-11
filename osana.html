@@ -31,7 +31,28 @@
             <td style="color: rgb(187, 255, 0);">+33</td>
           </tr>
     </table>
-    
+    <button style="color: rgb(255, 68, 0);" id="downloadOsana">Download Osana Image</button>
+
+    <script>
+      document.getElementById("downloadOsana").addEventListener("click", function () {
+        const osanaImg = "images/ChibiOsana.png";
+        
+        const a = document.createElement("a");
+
+        a.href = osanaImg;
+
+        a.download = "ChibiOsana.png"
+
+        document.body.appendChild(a);
+
+          // Trigger a click on the <a> element
+        a.click();
+
+          // Remove the anchor after download
+        document.body.removeChild(a);
+
+      });
+    </script>
 </body>
 
 </html>
