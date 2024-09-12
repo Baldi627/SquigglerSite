@@ -35,6 +35,11 @@
     84% {color: purple;}
     100% {color: red;}
 }
+@keyframes minecraft-splash {
+  0% {scale: 1;}
+  50% {scale: 2;}
+  100% {scale: 1;}
+}
 
 .america-back {
     animation-name: america-bg;
@@ -69,6 +74,11 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+}
+.splash-text {
+  animation-name: minecraft-splash;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
 }
 
 
