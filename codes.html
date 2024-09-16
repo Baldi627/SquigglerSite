@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Secret</title>
+    <link rel="stylesheet" href="styles/style_a.css">
+</head>
+<body class="rainbow-back">
+
+    <h1 class="important" align=center>Hello!</h1>
+    <input type="text" id="codebox" placeholder="Code goes here!">
+    <footer class="splash-text" align="center" style="width: fit-content;">v0.0.2.4</footer>
+    <button onclick="verify()">Submit Code</button>
+    <script>
+        const super_codes = [
+            "1999",
+            "Yandere",
+            "Break"
+        ];
+        function verify() {
+            const textBox = document.getElementById("codebox");
+            if (super_codes.includes(textBox.value)) {
+                activateCode(textBox.textContent.value);
+            }
+            else {
+                alert("This is not a valid SuperCode!");
+            }
+        }
+        function activateCode(super_code) {
+            if (super_code == "1999") {
+                const baldi_doc = "docs/1999.txt"
+
+                const a = document.createElement("a");
+
+                a.href = baldi_doc;
+
+                a.download = "1999.txt";
+
+                document.body.appendChild(a);
+
+                a.click();
+
+                document.body.removeChild(a);
+
+            }
+            if (super_code == "Yandere") {
+                alert("No functionality exists for this code.")
+            }
+            if (super_code == "Break") {
+                alert("No functionality exists for this code.")
+            }
+        }
+    </script>
+</body>
+
+</html>
