@@ -16,15 +16,16 @@
         const super_codes = [
             "1999",
             "Yandere",
-            "Break"
+            "92217"
         ];
         function verify() {
             const textBox = document.getElementById("codebox");
-            if (super_codes.includes(textBox.value)) {
-                activateCode(textBox.textContent.value);
+            const sup_cod = textBox.value
+            if (super_codes.includes(sup_cod)) {
+                activateCode(sup_cod)
             }
             else {
-                alert("This is not a valid SuperCode!");
+                alert(sup_cod + " is not a valid SuperCode!");
             }
         }
         function activateCode(super_code) {
@@ -44,10 +45,7 @@
                 document.body.removeChild(a);
 
             }
-            if (super_code == "Yandere") {
-                alert("No functionality exists for this code.")
-            }
-            if (super_code == "Break") {
+            else {
                 alert("No functionality exists for this code.")
             }
         }
