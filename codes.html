@@ -18,15 +18,9 @@
     </nav>
     <hr>
     <input type="text" id="codebox" placeholder="Code goes here!">
-    <footer align="center" style="width: fit-content;">v0.0.2.4</footer>
+    <footer id="version-number" align="center" style="width: fit-content;">v0.0.2.4</footer>
     <button onclick="verify()">Submit Code</button>
     <script>
-        fetch("./version.json")
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('version-number').textContent = `Version: ${data.version}`;
-        })
-        .catch(err => console.log('Error loading version:', err));
         const super_codes = [
             "1999",
             "Yandere",
@@ -79,6 +73,12 @@
                 alert("No functionality exists for this code.")
             }
         }
+        fetch("./version.json")
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('version-number').textContent = `Version: ${data.version}`;
+        })
+        .catch(err => console.log('Error loading version:', err));
     </script>
 </body>
 
