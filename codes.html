@@ -24,7 +24,7 @@
         fetch("./version.json")
         .then(response => response.json())
         .then(data => {
-          document.getElementById('version-number').textContent = `Version: ${data.version}` + `- ${data.version-type}`;
+          document.getElementById('version-number').textContent = `Version: ${data.version}`;
         })
         .catch(err => console.log('Error loading version:', err));
         const super_codes = [
