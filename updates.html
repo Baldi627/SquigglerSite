@@ -15,18 +15,18 @@
             <li><a href="updates.html">What's New?</a></li>
         </ul>
     </nav>
+    <h1 id="version-number">What's new in version DEV?</h1>
     <pre style="font-family: cursive;" align="center">
-        This basic site is a simple hobby project and is not meant to be taken seriously.
-        We are currently going through some minor restructuring, please be patient.
+        The background of the SuperCodes page is no longer Rainbow.
     </pre>
     <script>
         fetch("./version.json")
         .then(response => response.json())
         .then(data => {
-          document.getElementById('version-number').textContent = `Version: ${data.version}`;
+          document.getElementById('version-number').textContent = `What's new in version ${data.version}?`;
         })
         .catch(err => console.log('Error loading version:', err));
     </script>
-    <footer id="version-number" align="center" style="width: fit-content;">Unable to load Version Number</footer>
+    <footer align="center" style="width: fit-content;">v0.0.2.5</footer>
 </body>
 </html>

@@ -13,11 +13,12 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="codes.html">SuperCodes</a></li>
+            <li><a href="updates.html">What's New?</a></li>
         </ul>
     </nav>
     <hr>
     <input type="text" id="codebox" placeholder="Code goes here!">
-    <footer class="splash-text" align="center" style="width: fit-content;">v0.0.2.4</footer>
+    <footer align="center" style="width: fit-content;">v0.0.2.4</footer>
     <button onclick="verify()">Submit Code</button>
     <script>
         const super_codes = [
@@ -52,10 +53,32 @@
                 document.body.removeChild(a);
 
             }
+            if (super_code == "Yandere") {
+                const baldi_doc = "docs/Cryptic_Y.txt"
+
+                const a = document.createElement("a");
+
+                a.href = baldi_doc;
+
+                a.download = "CRYPTIC_Y.txt";
+
+                document.body.appendChild(a);
+
+                a.click();
+
+                document.body.removeChild(a);
+
+            }
             else {
                 alert("No functionality exists for this code.")
             }
         }
+        fetch("./version.json")
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('version-number').textContent = `Version: ${data.version}` + `- ${data.version-type}`;
+        })
+        .catch(err => console.log('Error loading version:', err));
     </script>
 </body>
 
